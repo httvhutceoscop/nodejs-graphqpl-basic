@@ -6,6 +6,7 @@ var {
 const schema = require('./schema');
 
 const app = express();
+const port = 8081
 
 app.use(
     '/graphql',
@@ -15,5 +16,5 @@ app.use(
     }),
 );
 
-app.listen(4000);
-console.log('Running a GraphQL API server at http://localhost:4000/graphql');
+app.listen(port);
+console.log(`Running a GraphQL API server at http://localhost:${port}/graphql`);
